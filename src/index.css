@@ -4,9 +4,17 @@
 
 .mainGradient {
   background-image: linear-gradient(
-    95.97deg,
-    rgb(11, 166, 255) 15.07%,
-    rgb(17, 90, 249) 100.37%
+    180deg,
+    rgb(0, 102, 218) 15.07%,
+    rgb(38, 0, 255) 100.37%
+  );
+}
+
+.secondaryGradient {
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 26, 255) 15.07%,
+    rgb(29, 0, 190) 100.37%
   );
 }
 
