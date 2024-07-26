@@ -9,7 +9,7 @@ export default function Button({ variant, children, ...props }) {
       break;
   }
   return (
-    <button className={`${variantClasses} w-56 rounded-3xl py-2`}>
+    <button className={`${variantClasses} w-56 rounded-3xl py-[10px] text-sm`}>
       {children}
     </button>
   );
