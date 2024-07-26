@@ -18,8 +18,8 @@ function App() {
     }
   }
   return (
-    <div className="flex items-center justify-center h-screen bg-[#eee]">
-      <div className="relative">
+    <div className="flex items-center justify-center min-h-screen bg-[#eee] font-inter">
+      <div className="bg-white flex rounded-2xl shadow-lg">
         <Result />
         <Summary />
       </div>

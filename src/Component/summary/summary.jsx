@@ -3,7 +3,7 @@ import Subject from "../subject/Subject";
 
 export default function Summary() {
   return (
-    <div className="w-80 pt-4 pb-8 shadow-lg flex flex-col justify-center items-center rounded-2xl cursor-default bg-white">
+    <div className="w-80 h-[420px] pt-4 pb-8 flex flex-col justify-center items-center rounded-2xl cursor-default bg-white">
       <h1 className="font-bold">Summary</h1>
       <div className="flex flex-col justify-center items-center gap-3 py-8">
         <Subject variant={"Reaction"}>Reaction</Subject>
