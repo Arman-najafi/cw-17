@@ -1,7 +1,7 @@
-import Summary from "./Component/subject/summary";
-import Average from "./Component/average";
-import { useEffect } from "react";
 import axios from "axios";
+import { useEffect } from "react";
+import Result from "./Component/result/Result";
+import Summary from "./Component/summary/summary";
 
 function App() {
   useEffect(() => {
@@ -18,9 +18,11 @@ function App() {
     }
   }
   return (
-    <div className="my-0 mx-auto min-h-screen w-2/3">
-      <Summary />
-      <Average />
+    <div className="flex items-center justify-center min-h-screen font-inter">
+      <div className="bg-white flex rounded-2xl shadow-2xl">
+        <Result />
+        <Summary />
+      </div>
     </div>
   );
 }
