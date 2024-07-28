@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "category": "verbal",
+      "score": 72
+    },
+    {
+      "category": "visual",
+      "score": 61
+    },
+    {
+      "category": "memory",
+      "score": 92
+    },
+    {
+      "category": "reaction",
+      "score": 80
+    }
+  ]
+}

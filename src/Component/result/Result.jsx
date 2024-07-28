@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { RootContext } from "../../context/RootContextProvider";
+
 export default function Result() {
+  const { gradeList, dispatch } = useContext(RootContext);
+  dispatch({ type: "average", payload: gradeList });
+
   return (
     <div className="w-[300px] h-[420px] pt-4 pb-8 flex flex-col justify-center items-center rounded-2xl cursor-default mainGradient gap-6">
       <p className="font-semibold text-gray-300">Your Result</p>
