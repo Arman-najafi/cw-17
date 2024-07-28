@@ -1,19 +1,26 @@
 import { createContext, useReducer } from "react";
 
 export const RootContext = createContext();
+let sum, average;
 const reducer = (state, action) => {
   switch (action.type) {
-    case "test":
-      let temp2 = state.data;
-      temp2 = action.payload;
+    case "showResult":
+      sum = action.payload.reduce((acc, item) => acc + item.score, 0);
+      average = sum / action.payload.length;
+      return { data: action.payload, average };
+    // case "average":
+    //   if (action.payload && action.payload.length > 0) {
+    //     console.log(action.payload);
+    //     let sum = action.payload.reduce((acc, item) => acc + item.score, 0);
+    //     let average = sum / action.payload.length;
+    //     return { data: action.payload, average };
+    //   } else {
+    //     return { ...state, average: 0 };
+    // return { data: action.payload, average: 0 };
+    //   }
 
-      return { ...state, data: temp2 };
-    case "average":
-      let temp = 0;
-      let average = 0;
-      // let sum = action.payload.map((item) => (temp += item.score));
-      average = temp / action.payload.length;
-      return { ...state, average: average };
+    default:
+      return state;
   }
 };
 
