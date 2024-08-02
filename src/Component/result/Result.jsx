@@ -1,15 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { RootContext } from "../../context/RootContextProvider";
 
 export default function Result() {
   const { gradeList, dispatch } = useContext(RootContext);
-  dispatch({ type: "average", payload: gradeList });
+  // dispatch({ type: "average", payload: gradeList.data });
 
   return (
     <div className="w-[300px] h-[420px] pt-4 pb-8 flex flex-col justify-center items-center rounded-2xl cursor-default mainGradient gap-6">
       <p className="font-semibold text-gray-300">Your Result</p>
       <div className="text-white flex flex-col justify-center items-center secondaryGradient w-40 h-40 rounded-full">
-        <h1 className="text-6xl font-semibold">76</h1>
+        <h1 className="text-5xl font-semibold">{gradeList.average}</h1>
         <p className="text-slate-300 text-sm">of 100</p>
       </div>
       <div className="flex flex-col justify-center items-center gap-2">

@@ -1,11 +1,11 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import Result from "./Component/result/Result";
 import Summary from "./Component/summary/summary";
 import { RootContext } from "./context/RootContextProvider";
 
 function App() {
-  const { dispatch } = useContext(RootContext);
+  const { gradeList, dispatch } = useContext(RootContext);
   useEffect(() => {
     getSubject();
   }, []);
@@ -13,7 +13,8 @@ function App() {
   async function getSubject() {
     try {
       const res = await axios.get(` http://localhost:3000/data`);
-      dispatch({ type: "test", payload: res.data });
+      if (res.data && res.data.length !== 0)
+        dispatch({ type: "showResult", payload: res.data });
     } catch (e) {
       console.log(e);
     }
